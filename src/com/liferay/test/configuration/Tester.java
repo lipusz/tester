@@ -12,13 +12,25 @@ import com.germinus.easyconf.EasyConf;
 public class Tester {
 
 	public static void main(String[] args) {
+		ComponentProperties props = _conf.getProperties();
 
-		ComponentConfiguration conf = EasyConf.getConfiguration("tester");
-		ComponentProperties props = conf.getProperties();
+		printName(props.getString(_TESTER_NAME));
 
-		String name = props.getString("tester.name");
+	}
 
+	public static void printName(String name) {
 		System.out.println("Tester name: " + name);
+	}
+
+	private static final String _CONFIGURATION_NAME = "tester";
+
+	private static final String _TESTER_NAME = "tester.name";
+
+	private static ComponentConfiguration _conf;
+
+	static {
+		_conf = EasyConf.getConfiguration(
+			_CONFIGURATION_NAME);
 	}
 
 }
