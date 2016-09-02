@@ -14,8 +14,9 @@ public class Tester {
 	public static void main(String[] args) {
 		ComponentProperties props = _conf.getProperties();
 
-		printName(props.getString(_TESTER_NAME));
+		String name = props.getString(_TESTER_NAME);
 
+		printName(name);
 	}
 
 	public static void printName(String name) {
