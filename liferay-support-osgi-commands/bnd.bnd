@@ -1,0 +1,4 @@
+Bundle-Name: Liferay Suppport OSGi Commands
+Bundle-SymbolicName: com.liferay.support.osgi.commands
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.support.osgi.commands
